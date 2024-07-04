@@ -1,30 +1,77 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Unlimi
 
-Currently, two official plugins are available:
+A simple project that shows the catalog of FragranceNet for Unlimi. The webpage shows the following data:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- S/N, Image, SKU, Name, Title, Description, Brand, Cost, Price, Quantity, and Size
 
-## Expanding the ESLint configuration
+# Built with
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project was built using the following technologies:
 
-- Configure the top-level `parserOptions` property like this:
+- ReactJS: A JavaScript library for building user interfaces, providing a component-based architecture.
+- Vite: A build tool that provides a faster and leaner development experience for modern web projects.
+- TypeScript: A statically typed superset of JavaScript that enhances code quality and developer productivity.
+- TailwindCSS: A utility-first CSS framework for rapid UI development with customizable and reusable styles.
+- Axios: A promise-based HTTP client for making HTTP requests to fetch or save data.
+- Lucide-react: A library for using customizable and responsive icons in React applications.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# Features
+
+- Search by title
+- Select all checkbox
+- Pagination
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/ogunshinaismail/Unlimi.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Go to the project directory
+
+```bash
+  cd unlimi
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+Go to your browser and input
+
+```bash
+  http://localhost:5173/
+```
+
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /products/public/catalog
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `supplier` | `string` | **Required**. Supplier name |
+| `first` | `number` | **Optional**.  |
+| `last` | `number` | **Optional**.  |
+| `search` | `string` | **Optional**. Search query |
+
+
+## Author
+
+- [Ogunshina Ismail](https://github.com/ogunshinaismail)
+
